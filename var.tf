@@ -9,7 +9,7 @@ variable "env_type" {
 
 variable "vpc_tag" {
   type    = string
-  default = "engage-vpc"
+  default = "rocket-vpc"
 }
 
 variable "subnet_tag" {
@@ -24,7 +24,7 @@ variable "ig_tag" {
 
 variable "ec2_tag" {
   type    = string
-  default = "engage-ec2"
+  default = "rocket-ec2"
 }
 
 variable "associate_public_ip_address" {
