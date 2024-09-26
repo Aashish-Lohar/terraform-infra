@@ -28,7 +28,7 @@ resource "aws_subnet" "engage-private-subnet" {
   count = 2
   vpc_id     = aws_vpc.engage-vpc.id
   cidr_block = cidrsubnet(aws_vpc.engage-vpc.cidr_block, 8, 2 + count.index)
-  map_public_ip_on_launch = true
+  map_public_ip_on_launch = false
   availability_zone = data.aws_availability_zones.az.names[count.index]
   tags = {
     Name = "${var.prefix}-private-${var.subnet_tag}-${count.index+1}"
